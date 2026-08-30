@@ -14,7 +14,7 @@ Target flag: always run stow with `-t ~` (or `-t $HOME`), since the repo lives u
 | i3 | ⬜ Not yet | |
 | neovim | ⬜ Not yet | |
 | kitty | ✅ Done | |
-| rofi | ⬜ Not yet | |
+| rofi | ✅ Done | |
 | zsh | ✅ Done | |
 | spicetify | ⬜ Not yet | |
 | polybar | ⬜ Not yet | |
