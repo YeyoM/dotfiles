@@ -86,10 +86,20 @@ if [ ! -d "$HOME/rofi-bluetooth" ]; then
     chmod +x "$HOME/rofi-bluetooth/rofi-bluetooth"
 fi
 
-# --- spicetify (has its own installer, not apt/git-clone based) ---
+# --- spicetify CLI ---
 if ! command -v spicetify &> /dev/null; then
     curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 fi
+
+# --- spicetify-themes collection (the actual theme files, not tracked in this repo) ---
+if [ ! -d "$HOME/.config/spicetify/Themes" ]; then
+    git clone https://github.com/spicetify/spicetify-themes "$HOME/.config/spicetify/Themes"
+fi
+
+# after stow runs and config-xpui.ini is in place:
+spicetify backup apply
+spicetify config current_theme text color_scheme TokyoNight
+spicetify apply
 
 # --- packer.nvim (plugin manager itself) ---
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
