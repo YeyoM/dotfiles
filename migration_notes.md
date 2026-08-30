@@ -13,7 +13,7 @@ Target flag: always run stow with `-t ~` (or `-t $HOME`), since the repo lives u
 | tmux | ✅ Done | `plugins/` gitignored, TPM reinstalled via `prefix + I` |
 | i3 | ⬜ Not yet | |
 | neovim | ⬜ Not yet | |
-| alacritty | ⬜ Not yet | |
+| kitty | ⬜ Not yet | |
 | rofi | ⬜ Not yet | |
 | zsh | ⬜ Not yet | |
 | spicetify | ⬜ Not yet | |
@@ -29,7 +29,7 @@ Target flag: always run stow with `-t ~` (or `-t $HOME`), since the repo lives u
 | **tmux** | `~/.config/tmux/tmux.conf` | `plugins/` dir is TPM clones — gitignored, not tracked |
 | **i3** | `~/.config/i3/config` | Often references polybar/picom in `exec_always` lines — test both together |
 | **neovim** | `~/.config/nvim/` | Plugin manager data lives in `~/.local/share/nvim/`, `~/.local/state/nvim/`, `~/.cache/nvim/` — don't move those, just gitignore them |
-| **alacritty** | `~/.config/alacritty/alacritty.toml` (or `.yml` on older installs) | Single file usually, low risk |
+| **kitty** | `~/.config/kitty/kitty.toml` (or `.yml` on older installs) | Single file usually, low risk |
 | **rofi** | `~/.config/rofi/config.rasi` + theme files | Themes are often separate `.rasi` files in the same folder — grab the whole dir |
 | **zsh** | `~/.zshrc` (home-level, not XDG) | If using oh-my-zsh, the framework itself lives in `~/.oh-my-zsh/` — don't move that, just track `.zshrc`; gitignore `.zsh_history` / `.zcompdump*` |
 | **spicetify** | `~/.config/spicetify/` | Has a `Themes/` folder (fine to track); spicetify has its own install/patch process, keep that separate from stow |
@@ -51,8 +51,8 @@ dotfiles/
 │   └── .config/i3/config
 ├── nvim/
 │   └── .config/nvim/
-├── alacritty/
-│   └── .config/alacritty/alacritty.toml
+├── kitty/
+│   └── .config/kitty/kitty.toml
 ├── rofi/
 │   └── .config/rofi/
 ├── zsh/
@@ -112,7 +112,7 @@ Add to this list as you migrate each tool and notice new cache/plugin/secret pat
 
 ## Suggested order for remaining tools
 
-1. **alacritty** — single file, near-zero risk
+1. **kitty** — single file, near-zero risk
 2. **picom** — single file, near-zero risk
 3. **zsh** — home-level dotfile, watch for oh-my-zsh framework path
 4. **rofi** — folder with theme files, still low complexity
