@@ -18,7 +18,7 @@ Target flag: always run stow with `-t ~` (or `-t $HOME`), since the repo lives u
 | zsh | ⬜ Not yet | |
 | spicetify | ⬜ Not yet | |
 | polybar | ⬜ Not yet | |
-| picom | ⬜ Not yet | |
+| picom | ✅ Done | |
 
 ---
 
