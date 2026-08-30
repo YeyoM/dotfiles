@@ -96,11 +96,6 @@ if [ ! -d "$HOME/.config/spicetify/Themes" ]; then
     git clone https://github.com/spicetify/spicetify-themes "$HOME/.config/spicetify/Themes"
 fi
 
-# after stow runs and config-xpui.ini is in place:
-spicetify backup apply
-spicetify config current_theme text color_scheme TokyoNight
-spicetify apply
-
 # --- packer.nvim (plugin manager itself) ---
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
     git clone --depth 20 https://github.com/wbthomason/packer.nvim \
@@ -118,6 +113,11 @@ for dir in */; do
     name="${dir%/}"
     stow -v -t "$HOME" "$name"
 done
+
+# after stow runs and config-xpui.ini is in place:
+spicetify backup apply
+spicetify config current_theme text color_scheme TokyoNight
+spicetify apply
 
 # ------------------------------------------------------------------
 # Manual steps that can't be scripted
