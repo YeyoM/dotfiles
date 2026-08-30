@@ -28,3 +28,6 @@ spicetify/.config/spicetify/Extracted/
 spicetify/.config/spicetify/Themes/
 spicetify/.config/spicetify/Extensions/
 spicetify/.config/spicetify/CustomApps/
+
+# polybar-collection — upstream repo's own README screenshots, not needed
+polybar-collection/polybar-collection/screenshots/
