@@ -1,0 +1,20 @@
+# tmux — plugin manager clones (installed via TPM, not tracked)
+tmux/.config/tmux/plugins/
+
+# zsh
+zsh/.zsh_history
+zsh/.zcompdump*
+
+# nvim — lazy/packer plugin data & caches, not the config itself
+nvim/.local/share/nvim/
+nvim/.local/state/nvim/
+nvim/.cache/nvim/
+
+# general local/machine-specific overrides — never commit secrets
+*.local
+.env
+
+# OS/editor noise
+.DS_Store
+*.swp
+*~
