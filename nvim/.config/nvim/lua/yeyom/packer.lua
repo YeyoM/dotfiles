@@ -17,12 +17,18 @@ return require('packer').startup(function(use)
     end
   }
 
-  use {
+  use({
     "xiyaowong/transparent.nvim",
     config = function()
-      vim.cmd.TransparentEnable()
+      require("transparent").setup({
+        extra_groups = { 
+          "NvimTreeNormal",
+          "BufferLineBackground",
+        },
+        exclude_groups = {},
+      })
     end
-  }
+  })
 
   -- Autocompletition, LSP, etc
   use('neovim/nvim-lspconfig')
