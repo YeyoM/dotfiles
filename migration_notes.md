@@ -12,7 +12,7 @@ Target flag: always run stow with `-t ~` (or `-t $HOME`), since the repo lives u
 |---|---|---|
 | tmux | ✅ Done | `plugins/` gitignored, TPM reinstalled via `prefix + I` |
 | i3 | ⬜ Not yet | |
-| neovim | ⬜ Not yet | |
+| neovim | ✅ Done | |
 | kitty | ✅ Done | |
 | rofi | ✅ Done | |
 | zsh | ✅ Done | |

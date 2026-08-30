@@ -91,6 +91,12 @@ if ! command -v spicetify &> /dev/null; then
     curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 fi
 
+# --- packer.nvim (plugin manager itself) ---
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+    git clone --depth 20 https://github.com/wbthomason/packer.nvim \
+        "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+fi
+
 # ------------------------------------------------------------------
 # 3. Stow every config folder in this repo
 # ------------------------------------------------------------------
